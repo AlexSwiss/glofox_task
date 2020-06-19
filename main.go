@@ -24,5 +24,7 @@ func Classes(w http.ResponseWriter, r *http.Request) {
 
 // Get single class
 func Class(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "view single class")
+	vars := mux.Vars(r)
+	classId := vars["classId"]
+	fmt.Fprintln(w, "Class:" classId)
 }
