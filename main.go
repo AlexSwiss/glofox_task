@@ -21,17 +21,24 @@ type class struct {
 
 type allClasses []class
 
-var classes = allClasses{
-	{
-		ID:        "1",
-		Name:      "Pilate",
-		StartDate: "21 Jun 20",
-		EndDate:   "02 Dec 20",
-		Capacity:  10,
-	},
+var classes allClasses
+
+// Dummy database
+func initClasses() {
+	classes = allClasses{
+		{
+			ID:        "1",
+			Name:      "Pilate",
+			StartDate: "21 Jun 20",
+			EndDate:   "02 Dec 20",
+			Capacity:  10,
+		},
+	}
 }
 
 func main() {
+
+	initClasses()
 
 	// Initialize mux router
 	router := mux.NewRouter().StrictSlash(true)
