@@ -60,7 +60,7 @@ func createClass(w http.ResponseWriter, r *http.Request) {
 
 // Get all classes
 func getClasses(w http.ResponseWriter, r *http.Request) {
-
+	json.NewEncoder(w).Encode(classes)
 }
 
 // Get single class
