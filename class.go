@@ -8,7 +8,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-// Models
+// Model for our class data
 type Class struct {
 	ID        int    `json:"id"`
 	Name      string `json:"name"`
@@ -19,6 +19,7 @@ type Class struct {
 
 var classes = []Class{}
 
+// Function to add a new class
 func addClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	body, err := ioutil.ReadAll(r.Body)
@@ -83,6 +84,7 @@ func addClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 }
 
+// Function to get all classes
 func listClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	classes, err := json.Marshal(classes)
 

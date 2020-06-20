@@ -14,6 +14,6 @@ func main() {
 	router.POST("/classes", addClass)
 	router.GET("/classes_list", listClass)
 	port := ":8080"
-	fmt.Println("Starting server on ", port)
+	fmt.Println("server started on port", port)
 	log.Fatal(http.ListenAndServe(port, router))
 }

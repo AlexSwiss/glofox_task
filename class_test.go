@@ -26,6 +26,10 @@ func TestAddClass(t *testing.T) {
 	url := "http://localhost:8080/classes_list"
 
 	tests := []TestStruct{
+		//{`{}`, BadRequestCode, "", 0},
+		//{`{"name":"workout101"}`, BadRequestCode, "", 0},
+		//{`{"name":"workout101","startdate":"10 Jun 20"}`, BadRequestCode, "", 0},
+		//{`{"name":"workout101","startdate":"10 Jun 20","enddate" : "20 Jun 20"}`, BadRequestCode, "", 0},
 		{`{"name":"workout101","startdate":"10 Jun 20","enddate" : "20 Jun 20", "capacity": "10"}`, SuccessRequestCode, "", 0},
 	}
 
