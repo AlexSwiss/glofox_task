@@ -37,9 +37,9 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 
 	// API endpoints
-	router.HandleFunc("/classes", createClass)
-	router.HandleFunc("/allclasses", getClasses)
-	router.HandleFunc("/allclasses/{id}", getClass)
+	router.HandleFunc("/classes", createClass).Methods("POST")
+	router.HandleFunc("/allclasses", getClasses).Methods("GET")
+	router.HandleFunc("/allclasses/{id}", getClass).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
