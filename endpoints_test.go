@@ -23,7 +23,7 @@ type TestStruct struct {
 //Inside user_test.go
 func TestAddClass(t *testing.T) {
 
-	url := "http://localhost:8080/classes_list"
+	url := "http://localhost:8080/api/classes_list"
 
 	tests := []TestStruct{
 		//{`{}`, BadRequestCode, "", 0},
@@ -58,7 +58,7 @@ func TestAddClass(t *testing.T) {
 
 func TestNewBooking(t *testing.T) {
 
-	url := "http://localhost:8080/bookings_list"
+	url := "http://localhost:8080/api/bookings_list"
 
 	tests := []TestStruct{
 		//{`{}`, BadRequestCode, "", 0},
