@@ -20,7 +20,6 @@ type TestStruct struct {
 	observedStatusCode int
 }
 
-//Inside user_test.go
 func TestAddClass(t *testing.T) {
 
 	url := "http://localhost:8080/api/classes_list"

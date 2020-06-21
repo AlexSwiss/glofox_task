@@ -19,7 +19,7 @@ type Class struct {
 
 var classes = []Class{}
 
-// Function to add a new class
+// Function to add a new class to the studio
 func addClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	body, err := ioutil.ReadAll(r.Body)
@@ -84,7 +84,7 @@ func addClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 }
 
-// Function to get all classes
+// Function to get all classes in the studio
 func listClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	classes, err := json.Marshal(classes)
 

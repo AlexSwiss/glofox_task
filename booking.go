@@ -17,7 +17,7 @@ type Booking struct {
 
 var bookings = []Booking{}
 
-// Function to add a new Booking
+// Function to make a new Booking to the studio
 func addNewBooking(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 
 	body, err := ioutil.ReadAll(r.Body)
@@ -73,7 +73,7 @@ func addNewBooking(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 
 }
 
-// Function to get all bookings
+// Function to get all bookings by clients
 func allBookings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	bookings, err := json.Marshal(bookings)
 
