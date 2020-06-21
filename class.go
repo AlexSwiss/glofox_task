@@ -8,7 +8,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-// Model for our class data
+// Class Model for our data
 type Class struct {
 	ID        int    `json:"id"`
 	Name      string `json:"name"`
@@ -72,7 +72,7 @@ func addClass(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		Message string `json:"message"`
 	}
 	var output Output
-	output.Message = "Successful Class Creation"
+	output.Message = "New Class created succesfully"
 
 	j, err := json.Marshal(output)
 	if err != nil {
